@@ -135,7 +135,7 @@ export default {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
     border: none;
-    width: 150px;
+    min-width: 150px;
     height: 40px;
 }
 
@@ -154,7 +154,8 @@ export default {
     }
 
     .slide_more_btn {
-        width: 100px;
+        min-width: 100px;
+        padding: 0 5px;
     }
 }
 
@@ -171,7 +172,7 @@ export default {
     }
 
     .slide_more_btn {
-        width: 70px;
+        min-width: 70px;
         height: 25px;
     }
 
@@ -207,7 +208,7 @@ export default {
     }
 
     .slide_more_btn {
-        padding: 0 5px;
+        min-width: 40px;
         height: 15px;
         border-radius: 4px;
         margin-left: 5px;
