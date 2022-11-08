@@ -50,6 +50,10 @@ export default {
     .navbar_wrapper {
         height: 70px !important;
     }
+
+    .navbar-nav {
+        align-items: stretch !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
