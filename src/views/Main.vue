@@ -31,17 +31,17 @@ export default {
                 {
                     title: 'ICsupply is a leading professional supplier of electronic devices and components',
                     img: require('../assets/images/main_slider_img1.jpg'),
-                    link: '#',
+                    link: { name: 'About' },
                 },
                 {
                     title: 'We serving customers needs in many industries, focusing mainly on Telecommunications and Industrial Automation markets.',
                     img: require('../assets/images/main_slider_img2.jpg'),
-                    link: '#',
+                    link: { name: 'Industries' },
                 },
                 {
                     title: 'Along with professional Procurement Service, we also offer engineering support and Testing services to fully satisfy any customer need.',
                     img: require('../assets/images/main_slider_img3.jpg'),
-                    link: '#',
+                    link: { name: 'Products' },
                 },
             ],
             imageBlocks: [

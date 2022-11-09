@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <Navbar />
-        <router-view />
+        <transition name="fade" mode="out-in" appear>
+            <router-view />
+        </transition>
         <CustomFooter />
     </div>
 </template>
@@ -21,5 +23,14 @@ export default {
     padding: 0;
     box-sizing: border-box;
     font-style: normal;
+}
+
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s ease;
+}
+
+.fade-enter, .fade-leave-active {
+    opacity: 0;
 }
 </style>

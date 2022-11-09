@@ -17,11 +17,12 @@
                 <h1 class="slide_title">
                     {{ slides[activeIndex].title || '' }}
                 </h1>
-                <button class="slide_more_btn">
-                    <a :href="slides[activeIndex].link || '#'">
+                <router-link style="text-decoration: none;" :to="slides[activeIndex].link || '#'">
+                    <button class="slide_more_btn">
                         more
-                    </a>
-                </button>
+                    </button>
+                </router-link>
+
             </div>
             <div class="slide_pagination">
         <span
@@ -137,10 +138,6 @@ export default {
     border: none;
     min-width: 150px;
     height: 40px;
-}
-
-.slide_more_btn a {
-    text-decoration: none;
     color: #ffffff;
     font-style: normal;
     font-weight: 600;
