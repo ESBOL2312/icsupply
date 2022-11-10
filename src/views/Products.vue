@@ -41,7 +41,7 @@ export default {
                 },
                 {
                     img: require('../assets/images/product_img4.jpg'),
-                    title: 'Electromechanical (ELEKTROMEHANIKA)'
+                    title: 'Electromechanics (ELEKTROMEHANIKA)'
                 },
                 {
                     img: require('../assets/images/product_img5.jpg'),
@@ -49,7 +49,7 @@ export default {
                 },
                 {
                     img: require('../assets/images/product_img6.jpg'),
-                    title: 'Telecommunication (TELEKOMUNIKACIONA OPREMA)'
+                    title: 'Telecommunication equipment (TELEKOMUNIKACIONA OPREMA)'
                 },
             ]
         }

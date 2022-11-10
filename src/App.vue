@@ -1,9 +1,11 @@
 <template>
     <div id="app">
         <Navbar />
-        <transition name="fade" mode="out-in" appear>
-            <router-view />
-        </transition>
+        <div class="content_wrapper">
+            <transition name="fade" mode="out-in" appear>
+                <router-view />
+            </transition>
+        </div>
         <CustomFooter />
     </div>
 </template>
@@ -32,5 +34,22 @@ export default {
 
 .fade-enter, .fade-leave-active {
     opacity: 0;
+}
+
+.content_wrapper {
+    padding-top: 90px;
+}
+
+@media screen and (max-width: 992px) {
+
+    .content_wrapper {
+        padding-top: 70px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content_wrapper {
+        padding-top: 60px !important;
+    }
 }
 </style>

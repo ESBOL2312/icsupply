@@ -30,6 +30,10 @@ export default {
     height: 90px;
     background: #FFFFFF;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
 }
 
 @media screen and (max-width: 1200px) {

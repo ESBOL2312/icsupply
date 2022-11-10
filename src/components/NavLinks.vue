@@ -1,26 +1,42 @@
 <template>
     <b-navbar-nav class="navigation">
-        <b-nav-item>
-            <router-link :to="{ name: 'About' }">About</router-link>
-        </b-nav-item>
-        <b-nav-item>
-            <router-link :to="{ name: 'Industries' }">Industries / Markets</router-link>
-        </b-nav-item>
-        <b-nav-item>
-            <router-link :to="{ name: 'Products' }">Products</router-link>
-        </b-nav-item>
-        <b-nav-item>
-            <router-link :to="{ name: 'Services' }">Our Services</router-link>
-        </b-nav-item>
-        <b-nav-item>
-            <router-link :to="{ name: 'Contacts' }">Contact Us</router-link>
-        </b-nav-item>
+        <li v-for="(link, index) in links" :key="index" class="nav-item">
+            <div class="nav-link">
+                <router-link active-class="link_active" :to="{ name: link.pathName }">{{ link.title }}</router-link>
+            </div>
+        </li>
     </b-navbar-nav>
 </template>
 
 <script>
 export default {
     name: 'NavLinks',
+    data() {
+        return {
+            links: [
+                {
+                    title: 'About',
+                    pathName: 'About',
+                },
+                {
+                    title: 'Industries / Markets',
+                    pathName: 'Industries',
+                },
+                {
+                    title: 'Products',
+                    pathName: 'Products',
+                },
+                {
+                    title: 'Our Services',
+                    pathName: 'Services',
+                },
+                {
+                    title: 'Contact Us',
+                    pathName: 'Contacts',
+                },
+            ],
+        };
+    },
 };
 </script>
 
@@ -38,6 +54,24 @@ export default {
     font-weight: 500;
     font-size: 12px;
     line-height: 20px;
+    position: relative;
+}
+
+.navigation a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    border-bottom: solid #333333 1px;
+    transition: 0.2s;
+    width: 0;
+    display: inherit;
+    margin: 0 auto;
+}
+
+.navigation a.link_active:after {
+    width: 105%;
 }
 
 @media screen and (max-width: 1200px) {

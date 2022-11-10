@@ -34,7 +34,7 @@ export default {
                     link: { name: 'About' },
                 },
                 {
-                    title: 'We serving customers needs in many industries, focusing mainly on Telecommunications and Industrial Automation markets.',
+                    title: 'We serve customer’s needs in many industries, mainly focusing on Telecommunications and Industrial Automation markets',
                     img: require('../assets/images/main_slider_img2.jpg'),
                     link: { name: 'Industries' },
                 },

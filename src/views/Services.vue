@@ -16,19 +16,19 @@ export default {
             imageBlocks: [
                 {
                     img: require('../assets/images/services_img.jpg'),
-                    paragraph: 'ICsupply offers a full cycle of professional Procurement Service, provided by our highly qualified stuff with many years of experience at electronic market. We offering you a wide range of services of costly and time-consuming procurement.',
+                    paragraph: 'ICsupply offers a full cycle of professional Procurement Service, provided by our highly qualified stuff with many years of experience at electronic market. We offers you a wide range of services of costly and time-consuming procurement.',
                 },
                 {
                     img: require('../assets/images/services_img2.jpg'),
-                    paragraph: 'Providing Excess Inventory Management Service, we are helping our customers to deal with their excess stocks. Quick stock evaluation and components marketing allow ICsupply to turn waste goods from their warehoused to a fresh cash flow.',
+                    paragraph: 'Providing Excess Inventory Management Service, we support our customers to deal with their excess stocks. Quick stock evaluation and components marketing allow ICsupply to turn waste goods from their warehoused to a fresh cash flow.',
                 },
                 {
                     img: require('../assets/images/services_img3.jpg'),
-                    paragraph: 'Our company established trustworthy relations with a wide range of distributors and suppliers of all sorts of electronic components and devices. As well as purchasing from distributors, we also ordering directly from factories and manufacturers across the world. In addition, ICsupply has proven itself as a reliable supplier of discontinued and allocated components.',
+                    paragraph: 'Our company established trustworthy relations with a wide range of distributors and suppliers of all sorts of electronic components and devices. As well as purchasing from distributors, we are also working directly with factories and manufacturers across the world. In addition, ICsupply has proven itself as a reliable supplier of discontinued and allocated components.',
                 },
                 {
                     img: require('../assets/images/services_img4.jpg'),
-                    paragraph: 'Providing Excess Inventory Management Service, we are helping our customers to deal with their excess stocks. Quick stock evaluation and components marketing allow ICsupply to turn waste goods from their warehoused to a fresh cash flow.',
+                    paragraph: 'Professional procurement service also includes control for quality of supplied goods. Our qualified warehouse staff has a sharp eye for every discrepancy that can cause discomfort to our customers uncomfortable. When receiving goods, ICSupply staff always checking integrity and quality of packaging. We can make visual inspection and solderability test. For any special customer request, we cooperate with professional testing laboratories and facilities.',
                 },
             ],
         };
