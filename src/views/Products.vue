@@ -132,6 +132,9 @@ export default {
     border-radius: 6px;
     height: 316px;
 }
+.custom_card:hover{
+    cursor: pointer;
+}
 
 .custom_card img {
     width: 100%;
