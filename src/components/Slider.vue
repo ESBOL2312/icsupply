@@ -19,7 +19,7 @@
                 </h1>
                 <router-link style="text-decoration: none;" :to="slides[activeIndex].link || '#'">
                     <button class="slide_more_btn">
-                        more
+                        {{$t('main.more')}}
                     </button>
                 </router-link>
 

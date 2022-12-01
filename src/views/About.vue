@@ -1,21 +1,15 @@
 <template>
     <div class="container">
         <Paragraph class="about_paragraph" margin="40px 0 0 0">
-            ICsupply is a leading professional supplier of electronic devices and components. We offer our customers a
-            wide range of supplied products including all kinds of active and passive electronic components, metering
-            tools and instruments, telecommunication devices.
+            {{$t('about.paragraph1')}}
         </Paragraph>
         <img class="about_img" style="margin-top: 40px;"
              src="../assets/images/about_img.jpg" alt="">
         <Paragraph class="about_paragraph" margin="40px 0 0 0">
-            We serve customer’s needs in many industries, mainly focusing on Telecommunications and Industrial
-            Automation markets. Having a solid experience in supplying of electronic components and devices, ICsupply
-            provides customers with reliable offers in a short time. Along with professional Procurement Service, we
-            also offer engineering support and Testing services to fully satisfy any customer need.
+              {{$t('about.paragraph2')}}
         </Paragraph>
         <Paragraph class="about_paragraph" margin="60px 0 75px 0">
-            The priority of our company is always to meet the expectations of our customers in terms of quality, product
-            variety and service. A good deal is one in which both parties are satisfied.
+               {{$t('about.paragraph3')}}
         </Paragraph>
     </div>
 </template>

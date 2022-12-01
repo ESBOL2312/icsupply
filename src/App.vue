@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <Navbar />
+        <Navbar :locales="locales"/>
         <div class="content_wrapper">
             <transition name="fade" mode="out-in" appear>
                 <router-view />
@@ -16,6 +16,25 @@ import CustomFooter from './layouts/CustomFooter.vue';
 
 export default {
     components: { Navbar, CustomFooter },
+    data(){
+        return{
+            locales: [
+                {
+                value: 'sr',
+                text: 'srpski jezik',
+                icon: require('./assets/images/sr.png'),
+                },
+                {
+                value: 'en',
+                text: 'English',
+                icon: require('./assets/images/en.png'),
+                },
+            ],
+        }
+    },
+    mounted() {
+        this.$set(this.$i18n, 'locale', 'sr');
+    },
 };
 </script>
 

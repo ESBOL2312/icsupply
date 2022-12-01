@@ -1,0 +1,7 @@
+const services = {
+    ph1:'Ponuda ICsupply obuhvata celokupan ciklus profesionalnih usluga snabdevanja koje pružaju naši visokokvalifikovani zaposleni sa dugogodišnjim iskustvom na tržištu elektronskih proizvoda. Nudimo širok asortiman usluga snabdevanja koje iziskuju velika novčana sredstva i puno vremena.',
+    ph2:'Kroz uslugu upravljanja viškom zaliha klijentima pomažemo u eliminaciji viška zaliha na stanju. Brza procena stanja zaliha i oglašavanje komponenti omogućavaju kompaniji ICSupply da neupotrebljivu robu iz skladišta pretvori u nove tokove gotovine.',
+    ph3:'Naša kompanija je uspostavila odnose poverenja sa velikim brojem distributera i dobavljača svih vrsta elektronskih komponenti i uređaja. Pored toga što vršimo nabavku od distributera, mi direktno sarađujemo sa fabrikama i proizvođačima širom sveta. Štaviše, kompanija ICsupply se dokazala kao pouzdani dobavljač komponenti koje se više ne proizvode, kao i komponenti čija je proizvodnja niža od potražnje na tržištu.',
+    ph4:'Profesionalne usluge snabdevanja obuhvataju i kontrolu kvaliteta nabavljene robe. Naši stručnjaci koji rade u skladištima vrlo dobro uočavaju svaku neusaglašenost koja može imati nepovoljan uticaj na naše klijente. Prilikom prijema robe, zaposleni u kompaniji ICSupply uvek vrše proveru integriteta i kvaliteta ambalaže. Takođe možemo da vršimo vizuelnu kontrolu i ispitivanje lemljivosti. U slučaju konkretnog zahteva klijenta, sarađujemo sa stručnim laboratorijama i institutima za ispitivanje.'
+   };
+   export default services;

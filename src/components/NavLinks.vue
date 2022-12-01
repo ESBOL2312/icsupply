@@ -11,32 +11,32 @@
 <script>
 export default {
     name: 'NavLinks',
-    data() {
-        return {
-            links: [
+    computed:{
+        links(){
+            return [
                 {
-                    title: 'About',
+                    title: this.$t('nav.about'),
                     pathName: 'About',
                 },
                 {
-                    title: 'Industries / Markets',
+                    title: this.$t('nav.industries_markets'),
                     pathName: 'Industries',
                 },
                 {
-                    title: 'Products',
+                    title: this.$t('nav.products'),
                     pathName: 'Products',
                 },
                 {
-                    title: 'Our Services',
+                    title: this.$t('nav.our_services'),
                     pathName: 'Services',
                 },
                 {
-                    title: 'Contact Us',
+                    title: this.$t('nav.contact_us'),
                     pathName: 'Contacts',
-                },
-            ],
-        };
-    },
+                }
+            ]
+        }
+    }
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex w-100 market_cards justify-content-center">
-        <div v-for="(card, index) in marketCards" class="market_card d-flex flex-column align-items-center">
+        <div v-for="(card, index) in marketCards" class="market_card d-flex flex-column align-items-center" :key="index">
             <div class="image_wrapper">
                 <img :src="card.img" alt="">
             </div>
@@ -17,32 +17,33 @@ import Paragraph from './Paragraph.vue';
 export default {
     name: 'MarketCards',
     components: { Paragraph },
-    data() {
-        return {
-            marketCards: [
+    computed:{
+        marketCards(){
+            return [
                 {
                     img: require('../assets/images/robot.svg'),
-                    paragraph: 'Industrial Automation',
+                    paragraph: this.$t('main.industrial_automation'),
                 },
                 {
-                    img: require('../assets/images/satellite.svg'),
-                    paragraph: 'Telecommunication',
+                    img: require('../assets/images/telecommucation.png'),
+                    paragraph: this.$t('main.telecommunication'),
                 },
                 {
                     img: require('../assets/images/security_cam.svg'),
-                    paragraph: 'Security and Surveillance',
+                    paragraph: this.$t('main.security_and_surveillance'),
+                    
                 },
                 {
                     img: require('../assets/images/spark.svg'),
-                    paragraph: 'Energy',
+                    paragraph: this.$t('main.energy'),
                 },
                 {
                     img: require('../assets/images/car.svg'),
-                    paragraph: 'Automotive',
+                    paragraph: this.$t('main.automotive'),
                 },
-            ],
-        };
-    },
+            ]
+        }
+    }
 };
 </script>
 

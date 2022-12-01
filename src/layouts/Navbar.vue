@@ -8,6 +8,23 @@
             <b-collapse id="nav-collapse" is-nav class="bg-white" style="z-index: 2;">
                 <b-navbar-nav class="w-100 container">
                     <NavLinks />
+                    <div class="lang_picker_wrapper">
+                        <b-dropdown variant="outline-secondary" no-caret dropdown size="sm">
+                        <template #button-content>
+                            <img class="w-100 h-100" :src="getCurrencyImg" alt="">
+                        </template>
+                        <b-dropdown-item
+                            v-for="lang in locales"
+                            :key="lang.value"
+                            @click="selectLang(lang.value)"
+                            :title="lang.text"
+                        >
+                            <img :src="lang.icon" alt="">
+                            {{ lang.text }}
+
+                        </b-dropdown-item>
+                        </b-dropdown>
+                    </div>
                     <ContactsSection />
                 </b-navbar-nav>
             </b-collapse>
@@ -22,6 +39,19 @@ import ContactsSection from '../components/ContactsSection.vue';
 export default {
     name: 'Navbar',
     components: { ContactsSection, NavLinks },
+    props:[
+        'locales'
+    ],
+    computed:{
+        getCurrencyImg() {
+        return this.locales.find(locale => locale.value === this.$i18n.locale).icon;
+        },
+    },
+    methods:{
+    selectLang(val) {
+      this.$set(this.$i18n, 'locale', val);
+    },
+    }
 };
 </script>
 
@@ -36,6 +66,12 @@ export default {
     top: 0;
 }
 
+.lang_picker_wrapper {
+  margin: 0 auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 1200px) {
     .navbar_wrapper .logo {
         width: 170px;
@@ -58,6 +94,9 @@ export default {
     .navbar-nav {
         align-items: stretch !important;
     }
+    .lang_picker_wrapper {
+        margin: 0 0 5px auto !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -68,6 +107,18 @@ export default {
     .navbar-collapse.collapse {
         top: 60px;
     }
+    .lang_picker_wrapper {
+        width: 24px;
+        height: 20px;
+        margin-bottom: 10px !important;
+    }
+}
+
+@media screen and (max-width: 510px) {
+  .lang_picker_wrapper {
+    width: 20px;
+    height: 16px;
+  }
 }
 </style>
 

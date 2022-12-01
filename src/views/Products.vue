@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row cards_wrapper">
             <div v-for="(card, index) in cards" :key="index" class="col-6 col-sm-4 p-1">
-                <div class="custom_card">
+                <div class="custom_card" @click="showModalData(card.modalData, card.title)">
                     <img :src="card.img" alt="">
                     <p>
                         {{ card.title }}
@@ -10,11 +10,18 @@
                 </div>
             </div>
         </div>
-        <Paragraph class="components_paragraph" margin="0 0 56px 0">ICsupply is a leading professional supplier of
-            electronic devices and components. We offer to our customers a wide range of supplying products including
-            all kinds of active and passive electronic components, metering tools and instruments, telecommunication
-            devices.
+        <Paragraph class="components_paragraph" margin="0 0 56px 0">
+            {{$t('products.ph1')}}
         </Paragraph>
+        <b-modal v-model="modalShow" centered :title="modalTitle" :hide-footer="true">
+            <ol class="products-data-list">
+                <li v-for="(mdata, index) in modalData" :key="index">
+                    {{
+                        mdata
+                    }}
+                </li>
+            </ol>
+        </b-modal>
     </div>
 </template>
 
@@ -24,34 +31,89 @@ import Paragraph from '../components/Paragraph.vue';
 export default {
     name: 'Components',
     components: { Paragraph },
-    data() {
-        return {
-            cards: [
+    data(){
+        return{
+            modalShow:false,
+            modalData:[],
+            modalTitle:''
+        }
+    },
+    computed: {
+        cards(){    
+            return [
                 {
                     img: require('../assets/images/product_img1.jpg'),
-                    title: 'Active Components (AKTIVA)'
+                    title: this.$t('products.active_components'),
+                    modalData:[
+                        this.$t('products.ac1'),
+                        this.$t('products.ac2'),
+                        this.$t('products.ac3'),
+                        this.$t('products.ac4'),
+                        this.$t('products.ac5'),
+                        this.$t('products.ac6'),
+                        this.$t('products.ac7')
+                    ]
                 },
                 {
                     img: require('../assets/images/product_img2.jpg'),
-                    title: 'Passive Components (PASIVA)'
+                    title: this.$t('products.passive_components'),
+                    modalData:[
+                        this.$t('products.pc1'),
+                        this.$t('products.pc2'),
+                        this.$t('products.pc3'),
+                        this.$t('products.pc4'),
+                        this.$t('products.pc5'),
+                    ]
                 },
                 {
                     img: require('../assets/images/product_img3.jpg'),
-                    title: 'Connectors (KONEKTORI)'
+                    title: this.$t('products.connectors'),
+                    modalData:[
+                        this.$t('products.cs1'),
+                        this.$t('products.cs2'),
+                        this.$t('products.cs3'),
+                        this.$t('products.cs4'),
+                        this.$t('products.cs5'),
+                    ]
                 },
                 {
                     img: require('../assets/images/product_img4.jpg'),
-                    title: 'Electromechanics (ELEKTROMEHANIKA)'
+                    title: this.$t('products.electromechanics'),
+                    modalData:[
+                        this.$t('products.es1'),
+                        this.$t('products.es2'),
+                        this.$t('products.es3'),
+                        this.$t('products.es4'),
+                    ]
                 },
                 {
                     img: require('../assets/images/product_img5.jpg'),
-                    title: 'Instruments and Tools (INSTRUMENTI I ALATI)'
+                    title: this.$t('products.instruments_tools'),
+                    modalData:[
+                        this.$t('products.it1'),
+                        this.$t('products.it2'),
+                        this.$t('products.it3'),
+                        this.$t('products.it4'),
+                    ]
                 },
                 {
                     img: require('../assets/images/product_img6.jpg'),
-                    title: 'Telecommunication equipment (TELEKOMUNIKACIONA OPREMA)'
+                    title: this.$t('products.telecommunication_equipment'),
+                    modalData:[
+                        this.$t('products.te1'),
+                        this.$t('products.te2'),
+                        this.$t('products.te3'),
+                        this.$t('products.te4'),
+                    ]
                 },
             ]
+        }
+    },
+    methods:{
+        showModalData(data, title){
+            this.modalShow = true
+            this.modalData = data
+            this.modalTitle = title
         }
     }
 };
@@ -84,6 +146,13 @@ export default {
     color: #333333;
     margin: 0;
     word-wrap: break-word;
+}
+.products-data-list{
+    padding: 0 30px;
+}
+.products-data-list li{
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 </style>
 
